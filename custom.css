@@ -1,0 +1,107 @@
+.parallax {
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxdetails {
+  /* The image used */
+  background-image: url("../resources/nature.jpg");
+
+  /* Set a specific height */
+  min-height: 900px;
+}
+
+
+.twocolors {
+  height: 1400px;
+  background: linear-gradient(to top,
+      #FEF6BF 0%,
+      #FEF6BF 40%,
+      white 40%,
+      white 100%);
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.navbar-nav .nav-link {
+  color: #361b4e;
+  transition-delay: 0.2s;
+  transition: 0.2s color;
+}
+
+.navbar-nav:hover .nav-link:hover {
+  color: #dc3494;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.overtint {
+  position: absolute;
+  background-color: rgba(0, 0, 46, .73);
+  height: 100%;
+  opacity: 0.7;
+  max-width: 100%;
+}
+
+.blogHeading {
+  padding: 10px 0 15px 0;
+  font-family: Josefin Sans;
+  font-weight: 100;
+  font-style:normal;
+  font-size: 20px;
+  letter-spacing: .7px;
+  line-height: 1.4em;
+  color: rgba(0, 0, 5, .8);
+}
+
+.blogSignature{
+  padding: 60px 0 0 0; 
+  font-family: Josefin Sans;
+  color:#85b2a3;
+  font-weight: 100;
+  letter-spacing: .7px;
+  line-height: 1.4em;
+  font-size:20px;
+}
+
+.blogParagraph {
+  padding: 15px 0 0 0;
+  font-family: Josefin Sans;
+  font-weight: 100;
+  font-style:normal;
+  font-size: 20px;
+  letter-spacing: .7px;
+  line-height: 1.4em;
+  color: rgba(0, 0, 5, .8);
+}
+
+.blogFooter {
+  padding: 35px 0 30px 0;
+  font-family: Josefin Sans;
+  font-weight: 100;
+  font-style:normal;
+  font-size: 20px;
+  letter-spacing: .7px;
+  line-height: 1.4em;
+  color: rgba(0, 0, 5, .8);
+}
+
+
+
+/* .navbar-nav:visited .nav-link:visited {
+  color: #a352ea; 
+} */
