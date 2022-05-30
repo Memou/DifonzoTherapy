@@ -24,7 +24,10 @@
   min-height: 900px;
 }
 
-
+.ParaContent{
+  background-color: #030303;
+  padding: 50px;
+}
 .twocolors {
   height: 1400px;
   background: linear-gradient(to top,
