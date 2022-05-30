@@ -23,11 +23,11 @@
   /* Set a specific height */
   min-height: 900px;
 }
-
+/* 
 .ParaContent{
   background-color: #030303;
   padding: 50px;
-}
+} */
 .twocolors {
   height: 1400px;
   background: linear-gradient(to top,
@@ -50,6 +50,15 @@
   color: #dc3494;
 }
 
+
+.contactLink {
+  color: #361b4e;
+  transition-delay: 0.2s;
+  transition: 0.2s color;
+}
+.contactLink:hover {
+  color: #dc3494;
+}
 
 .center {
   display: block;
