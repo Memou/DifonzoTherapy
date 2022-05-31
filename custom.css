@@ -60,6 +60,10 @@
   color: #dc3494;
 }
 
+/* ::placeholder{
+  color: #FEF6BF;
+} */
+
 .center {
   display: block;
   margin-left: auto;
