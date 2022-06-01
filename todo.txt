@@ -1,0 +1,23 @@
+1-Redesign the index page
+2-Fix the navbar
+
+
+-Look at a few more therapists websites
+
+-Maybe embed html into html
+-Cut/edit video.
+-Switch to image for cellphone?
+-Put all pictures to imgur
+-Find a good video for index
+-Psychedelic website
+-Change the footer
+
+
+-Mobile shortcut in the bottom
+-black line on right side in video
+
+
+With Melissa: 
+-Create new mail at porkbun
+-Link it to melissas gmail
+-Link mailchimp,open account to melissas mail.
