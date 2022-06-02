@@ -21,7 +21,7 @@
   background-image: url("resources/nature.jpg");
 
   /* Set a specific height */
-  min-height: 900px;
+  min-height: 820px;
 }
 /* 
 .ParaContent{
@@ -29,7 +29,6 @@
   padding: 50px;
 } */
 .twocolors {
-  height: 1400px;
   background: linear-gradient(to top,
       #FEF6BF 0%,
       #FEF6BF 40%,

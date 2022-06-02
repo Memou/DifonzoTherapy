@@ -1,6 +1,6 @@
 1-Redesign the index page
 2-Fix the navbar
-
+3-Logo pull up
 
 -Look at a few more therapists websites
 
