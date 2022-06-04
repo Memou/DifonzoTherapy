@@ -1,17 +1,15 @@
 1-Redesign the index page
 2-Fix the navbar
-3-Logo pull up
 
 -Look at a few more therapists websites
-
 -Maybe embed html into html
 -Cut/edit video.
 -Switch to image for cellphone?
 -Put all pictures to imgur
 -Find a good video for index
--Psychedelic website
+-Psychedelic page
 -Change the footer
-
+-make all the links in nav and images/video point to right location
 
 -Mobile shortcut in the bottom
 -black line on right side in video
