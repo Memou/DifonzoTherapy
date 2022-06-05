@@ -1,19 +1,18 @@
-1-Redesign the index page
-2-Fix the navbar
+1-Fix the navbar
 
 -Look at a few more therapists websites
 -Maybe embed html into html
--Cut/edit video.
 -Switch to image for cellphone?
--Put all pictures to imgur
--Find a good video for index
+-host pictures in site,host videos in vimeo/imgur
+-Find a good video for index.make it 4k
 -Psychedelic page
--Change the footer
 -make all the links in nav and images/video point to right location
+-add all the blogs
+-double check all the footer to have the same info
 
 -Mobile shortcut in the bottom
 -black line on right side in video
-
+-with of subscribe give pdf
 
 With Melissa: 
 -Create new mail at porkbun
