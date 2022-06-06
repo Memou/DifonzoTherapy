@@ -1,8 +1,6 @@
 1-Fix the navbar
 
 -hamburger color
--index page has a gap on the right
--youtube video is not scaling up and down
 -make the text smaller/not move/wrap on smaller screens on index page
 -navbar coloring
 
