@@ -26,7 +26,8 @@
 
 <body style="font-family: 'Avenir LT Std', sans-serif;background-color: white;">
 
-  <div class="container-fluid">
+  <!-------------navbar--------------->
+  <div class="container-fluid pb-5">
     <nav class="navbar navbar-expand-sm navbar-light text-center justify-content-center" style="margin-top:-25px; ">
       <div class="navbar-header">
         <div>
@@ -37,29 +38,34 @@
           margin-top:-30px;">
           </a>
         </div>
-        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
           aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon custom-toggler">
-
-          </span>
+          <span class="line"></span> 
+          <span class="line"></span> 
+          <span class="line"></span>  
         </button>
-
         <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active"><a href="/index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="/pages/services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="/pages/about-melissa.html" class="nav-link">About Melissa</a></li>
-            <li class="nav-item"><a href="/pages/contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="/pages/blog.html" class="nav-link">Blog</a></li>
+          <ul class="navbar-nav nav-fill w-100">
+            <li class="nav-item"><a href="/index.html" class="nav-link" style="color: #a352ea;">Home</a></li>
+            <li class="nav-item"><a href="/services.html" class="nav-link" style="color: #361b4e;">Services</a></li>
+            <li class="nav-item"><a href="/about-melissa.html" class="nav-link" style="color: #361b4e;">About
+                Melissa</a></li>
+            <li class="nav-item"><a href="/contact.html" class="nav-link" style="color: #361b4e;">Contact</a></li>
+            <li class="nav-item"><a href="/blog.html" class="nav-link" style="color: #361b4e;">Blog</a></li>
+            <li class="nav-item"><a href="" class="nav-link" style="color: #DC3494;">Book Now</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
+
+    <!-------------video and first view--------------->
+
   </div>
-  <div class="container-fluid p-0 overflow-hidden" style="height:700px;
+  <div class="container-fluid p-0 overflow-hidden" style="height:600px;
   padding: 50px 0px;">
     <video style="
-    min-height:800px;
+    min-height:600px;
     position:fixed;
     min-width: 100%;
     min-height: 100%;
@@ -69,9 +75,9 @@
       <source src="resources/b5.mp4" type="video/mp4" />
     </video>
 
-    <p class="text-center pt-5" style="
-    color:#8c58b9;
-    font-size:7.5em;
+
+    <p class="text-center pt-3  display-1" style="
+    color:#361b4e;
     font-family: 'didot', sans-serif;
     ">
       Melissa Di Fonzo
@@ -83,31 +89,29 @@
     ">
       psychoteraphy
     </p> -->
-    <p class="text-center pt-1" style="position: relative;
+    <p class="text-center pt-2 fs-3 pb-2" style="position: relative;
    color:#8c58b9;
-    font-size:1.5em;
     font-family: 'Didot', sans-serif;
     font-style: italic;
     font-weight: 100;
     ">
       Providing
     </p>
-    <p class="text-center pt-4" style="position: relative;
+    <p class="text-center pt-5 display-5" style="position: relative;
     color: white;
-    font-size:3.8em;
     font-family: 'Avenir LT Std', sans-serif;
     ">
       INDIVIDUAL PSYCHOTHERAPY
     </p>
-    <p class="text-center pt-4" style="position: relative;
+    <p class="text-center pt-5 fs-4" style="position: relative;
     color: white;
-    font-size:1.3em;
     font-family: 'Righteous', sans-serif;
     ">
       THE PRIVILEDGE OF A LIFETIME IS TO BECOME WHO YOU TRULY ARE
     </p>
   </div>
 
+  <!-------------second section--------------->
   <div class="pt-5 pb-5" style="background-color:white;">
     <div class="container" style="background-color: #8c58b9;">
       <div class="row">
@@ -176,6 +180,7 @@
   </div>
   <div style="background-color: white;padding-top: 2.5em;"></div>
 
+    <!-------------third section--------------->
   <div class="container-fluid parallax parallaxdetails p-0 overflow-hidden">
     <div class="container" style="background-color:rgba(244, 226, 153, 0.9);
     padding-bottom: 3em;
@@ -217,7 +222,7 @@
     </div>
   </div>
 
-
+    <!-------------forth section--------------->
   <div class="container-fluid text-center" style="
      padding:100px 0px 100px 0px;
      background-color: white;">
@@ -284,6 +289,7 @@
       </div>
     </div>
   </div>
+
   <!-- Begin Mailchimp Signup Form -->
   <div style="background-color:white;">
     <div class="container pb-5 pt-5" style="background-color: white;" )>
@@ -351,30 +357,28 @@
         })
     })()
   </script>
-
   <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
   <script
     type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
   <!--End mc_embed_signup-->
 
+
+ <!-------------footer--------------->
   <footer class="text-black text-center" style="background-color:rgb(182, 251, 243)">
     <div style="padding:25px 0px 10px 0px">
-      <a href="mailto:melissa@difonzo.com?subject=I am interested to know more about"
+      <a href="mailto:melissa@difonzotherapy.com?subject=I am interested to know more about"
         class="text-decoration-none contactLink" style="font-weight: bold ;padding-right:40px">
         Contact
       </a>
       <a href="https://www.instagram.com/melissa.difonzo.therapy/?hl=en" class="text-decoration-none contactLink">
         <i class="bi-instagram" style="padding-right:10px"></i>
       </a>
-      <a href="https://www.facebook.com" class="text-decoration-none contactLink">
-        <i class="bi-facebook" style="padding-right:10px"></i>
-      </a>
       <a href=" https://www.linkedin.com/in/melissa-di-fonzo-724016154/" class="text-decoration-none contactLink">
         <i class="bi-linkedin" style="padding-right:10px"></i>
       </a>
     </div>
     <div class=" fs-5">
-      <a href="mailto:melissa@difonzo.com" class="contactLink">melissa@difonzotherapy.com</a>
+      <a href="mailto:melissa@difonzotherapy.com" class="contactLink">melissa@difonzotherapy.com</a>
     </div>
     <div class="text-wrap " style="margin:20px 20% 20px 20%">
       Melissa acknowledges that the work she does is on the traditional territory of many nations
