@@ -1,15 +1,21 @@
+
+
+
+-copy the footer to have the same info
+
+-mailchimp validation is broken
+-black line on right side in video
+-rename the pictures and change the links
+
 -host pictures in site,host videos in vimeo/imgur
 -Find a good video for index.make it 4k
 -Psychedelic page
--rename the pictures and change the links
--add all the blogs
--double check all the footer to have the same info
 
--Mobile shortcut in the bottom
--black line on right side in video
+-add all the blogs
 -with of subscribe give pdf
 
 With Melissa: 
 -Create new mail at porkbun
 -Link it to melissas gmail
--Link mailchimp,open account to melissas mail.
+-Link mailchimp,open account to melissas 
+
