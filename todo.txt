@@ -6,8 +6,11 @@
 -delete the unnecessary resources
 -Psychedelic page
 -copy the index footer to all pages after melissa gives final ok
--add all the blogs 6 more blogs,put them all to blogs page
+-copy the navigation to all pages after melissa gives final ok
 -with of subscribe give pdf
 -make logo with just therapy
--open a youtube channel with melissa from the email and upload the video there.
--open jane
+-reorder blogs on blog-page,and select the one for the index page
+
+Make these hidden:
+-open a youtube channel with melissa and upload the video there.
+-open jane account (free edition,then we will convert it to premium when time comes)
