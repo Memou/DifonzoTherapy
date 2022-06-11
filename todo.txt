@@ -1,13 +1,12 @@
--fix the footer icon padding
-
 -mailchimp validation is broken
--rename the pictures and change the links
 
+-rename the pictures and change the links or not
 -host pictures in site,host videos in vimeo/imgur
--Find a good video for index.make it 4k
+-Find a good video for index.make it 4k,or cherry pic
+-delete the unnecessary resources
 -Psychedelic page
-
--add all the blogs 10 more blogs
+-copy the index footer to all pages after melissa gives final ok
+-add all the blogs 6 more blogs,put them all to blogs page
 -with of subscribe give pdf
-
-
+-make logo with just therapy
+-open a youtube channel with melissa from the email and upload the video there.
