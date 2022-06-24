@@ -12,23 +12,32 @@
   min-height: 900px;}
 
 .parallaxdetails {
-  /* The image used */
-  background-image: url("resources/cherry.jpg");
-
-  /* Set a specific height */
+   background-image: url("resources/pexels-ithalu-dominguez-907485.jpg"); 
+  /* background: rgb(182,118,238);
+  background: linear-gradient(90deg, rgba(182,118,238,1) 0%, rgba(254,233,104,1) 28%, rgba(144,250,235,1) 48%, rgba(95,196,223,1) 69%, rgba(240,97,158,1) 100%); */
   min-height: 820px;
 }
+.parallaxdetails2 {
+   background: rgb(182,118,238);
+  background: linear-gradient(90deg, rgba(182,118,238,1) 0%, rgba(254,233,104,1) 28%, rgba(144,250,235,1) 48%, rgba(95,196,223,1) 69%, rgba(240,97,158,1) 100%); 
 
+  min-height: 5px;
+}
+.borderRainbow{
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, rgba(182,118,238,1),rgba(254,233,104,1),rgba(144,250,235,1),rgba(95,196,223,1),rgba(240,97,158,1));
+}
 .twocolors {
   background: linear-gradient(to top,
-      #FEF6BF 0%,
+      #fef15f 0%,
       #FEF6BF 50%,
       white 50%,
       white 100%);
   max-width: 100%;
   max-height: 100%;
-
 }
+
 
 .navbar-nav .nav-link {
   color: #361b4e;
