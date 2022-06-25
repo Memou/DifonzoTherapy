@@ -1,19 +1,13 @@
--mailchimp validation is broken
+-mailchimp validation refix
+-video recut
 
+-navbar put jane linkto index and copy it to other pages.
 -rename the pictures and change the links or not
 -host pictures in site,host videos in vimeo/imgur
--Find a good video for index.make it 4k,or cherry pic
--delete the unnecessary resources
--copy the index footer to all pages after melissa gives final ok
--copy the navigation to all pages after melissa gives final ok
--with of subscribe give pdf
--make logo with just therapy
--blog pages need a closing div so footer is fluid 
--book now to book online on header
+-Index video maybe make it 4k
 -add the jane links to book online and services section
-
-Copy cherryversion index to other one and fix the nav if that one is chosen
 
 Make these hidden:
 -open a youtube channel with melissa and upload the video there.
 -open jane account (free edition,then we will convert it to premium when time comes) 
+-with of subscribe give pdf
