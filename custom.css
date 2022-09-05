@@ -42,6 +42,7 @@
   color: #361b4e;
   transition-delay: 0.2s;
   transition: 0.2s color;
+  font-size:large;
 }
 
 .navbar-nav:hover .nav-link:hover {
@@ -50,15 +51,16 @@
 .navbar-toggler .line{
   width: 100%;
   float: left;
-  height: 2px;
+  height: 2.5px;
   margin-top: 2px;
   background-color: #ebe0f5;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .navbar-toggler{
-  width: 47px;
-  height: 34px;
+  margin-top: 10px;
+  width: 57px;
+  height: 44px;
   background-color: #361b4e;} 
   
 .contactLink {
