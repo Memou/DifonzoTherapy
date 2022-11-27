@@ -56,7 +56,10 @@
   background-color: #ebe0f5;
   margin-bottom: 8px;
 }
-
+.navbar-nav .nav-link,
+.navbar-brand {
+  text-align: center;
+}
 .navbar-toggler{
   margin-top: 10px;
   width: 57px;
