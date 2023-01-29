@@ -141,6 +141,16 @@ video {
   clip-path: inset(1px 0px);
 }
 
+@media only screen and (max-width: 767px) {
+  .firstSection {
+    background: url("./resources/MelNewCropped2.png") no-repeat center;  background-size:cover;
+  }
+  .firstSectionText {color:white;
+  }
+  .firstSectionTextName {margin-top : 2em
+  }
+}
+
 @font-face {
   font-family: "Didot";
   src: url("resources/fonts/Didot.woff") format('woff');
