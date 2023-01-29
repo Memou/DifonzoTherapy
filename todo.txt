@@ -11,3 +11,10 @@ Make these hidden:
 -open a youtube channel with melissa and upload the video there.
 -open jane account (free edition,then we will convert it to premium when time comes) 
 -with of subscribe give pdf
+
+
+TODO NEW:
+big screen pull the first section text to middle
+maybe pull mels pic to left a bit for big and mid size
+copy navbar to other pages
+2nd section and 3rd section redesign

@@ -26,14 +26,14 @@
 <body style="font-family: 'Avenir LT Std', sans-serif;background-color: white;">
 
   <!-------------navbar--------------->
-  <div class="container-fluid pb-5">
+  <div class="container-fluid ">
     <nav class="navbar navbar-expand-sm navbar-light text-center justify-content-center" style="margin-top:-15px; ">
       <div class="navbar-header">
         <div style="width: 375px;">
           <a class="navbar-brand justify-content-center">
-            <img src="/resources/logoMain.png" style="
-          width: 375px;
-          height: 225px;
+            <img class="col-12 col-md-12  " src="/resources/logo-aboutme-blog.png" style="
+          /* width: 375px;
+          height: 225px; */
           margin-top:-30px;">
           </a>
         </div>
@@ -46,17 +46,17 @@
         
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item"><a href="/index.html" class="nav-link" style="color: #a352ea;">Home</a></li>
+            <li class="nav-item"><a href="/index.html" class="nav-link" style="margin-right:0.5em;margin-left:-20px;color: #a352ea;">Home</a></li>
             <!-- <li class="nav-item"><a href="/services.html" class="nav-link" style="color: #361b4e;">Services</a></li> -->
             <li class="nav-item"><a href="/about-melissa.html" onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#361b4e'"
-              class="nav-link" style="color: #361b4e;">About
+              class="nav-link" style="margin-right:0.5em;color: #361b4e;">About
                 Melissa</a></li>
-            <li class="nav-item"><a href="/contact.html" onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#361b4e'"
-              class="nav-link" style="color: #361b4e;">Contact</a></li>
+            <!-- <li class="nav-item"><a href="/contact.html" onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#361b4e'"
+              class="nav-link" style="color: #361b4e;">Contact</a></li> -->
             <li class="nav-item"><a href="/blog.html"    onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#361b4e'" 
-              class="nav-link" style="color: #361b4e;">Blog</a></li>
+              class="nav-link" style="margin-right:0.5em;color: #361b4e;">Blog</a></li>
             <li class="nav-item"><a href="mailto:melissa@difonzotherapy.com?subject=I am interested to know more about"
-              class="nav-link" style="color: #DC3494;">Email Now <i class="bi bi-box-arrow-up-right"></i></a></i>
+              class="nav-link" style="margin-right:0.5em;color: #DC3494;">Email Now <i class="bi bi-box-arrow-up-right"></i></a></i>
             </li>
           </ul>
         </div>
@@ -64,8 +64,51 @@
     </nav>
   </div>
 
-  <!-------------video and first view--------------->
+  <!-------------first section--------------->
+  <div class="container-fluid p-0 overflow-hidden firstSection">
+    <div class="pt-0 ">
+      <div class="container-fluid p-0 overflow-hidden">
+        <div class="row">
 
+          <div class="col-12 col-md-5 offset-md-1 ">
+            <p class="text-center pt-5 display-1 firstSectionText firstSectionTextName" style="   
+          font-family: 'didot', sans-serif;
+          color:#361b4e;
+          margin-top: 1em">
+              Melissa Di Fonzo 
+            </p>
+
+            <p class="text-center pt-2 fs-3 pb-2 firstSectionText" style="position: relative;
+          font-family: 'Didot', sans-serif;
+          font-style: italic;
+          font-weight: 100;    color:#361b4e;">
+              Providing
+            </p>
+            <p class="text-center pt-1 display-5" style="position: relative;
+            color: white;
+            font-family: 'Avenir LT Std';color: #a352ea;    color:#361b4e;
+            ">
+              INDIVIDUAL PSYCHOTHERAPY
+            </p>           
+
+          </div>
+           
+          <div class="Col-12 col-md-6 d-none d-md-block" style="margin-top:-13px">
+            <picture>
+              <source media="(min-width: 576px)" height="">
+              <!-- else show this up to lg -->
+              <source media="(max-width: 992px)" height="520"srcset="resources/MelNewCropped2.png">
+              <!-- else show this -->
+              <img class="" alt="firstPic" height="700" src="resources/MelNewCropped2.png">  
+            </picture>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------------video and first view--------------->
+<!-- 
   <div class="container-fluid p-0 overflow-hidden" style="height: 525px;
   padding: 50px 0px;">
     <video style="
@@ -91,7 +134,7 @@
       "> (MSW, RSW) </span>
     </p>
 
-    <img class="img-fluid pb-4 center" style="width: 500px;margin-top:-80px" src="resources/pyschotherapyKoyu.png">
+    <img class="img-fluid pb-4 center" style="width: 500px;margin-top:-80px" src="resources/pyschotherapyKoyu.png"> -->
 
 
     <!-- <p class="text-center" style="position: relative ;top: -1.2em;
@@ -115,8 +158,8 @@
     ">
       INDIVIDUAL PSYCHOTHERAPY
     </p> -->
-
-  </div>
+<!-- 
+  </div> -->
   <!-------------mini section--------------->
   <div class="container-fluid parallax parallaxdetails2 p-0 overflow-hidden">
   </div>
@@ -199,7 +242,8 @@
                   <li style=" list-style-position: inside;color:#DC3494">Addictions</li>
                   <li style=" list-style-position: inside;color:#DC3494">Obsessive-Compulsive Disorder (OCD)</li>
                   <li style=" list-style-position: inside;color:#DC3494">Borderline Personality Disorder (BPD)</li>
-                  <li style=" list-style-position: inside;color:#DC3494">Psychedelic Integration</li>                  
+                  <li style=" list-style-position: inside;color:#DC3494">Psychedelic Integration</li>
+                  <li style=" list-style-position: inside;color:#DC3494">Eye Movement Desensitization and Reprocessing(EMDR)</li>                                    
                 </ul>
               </div>
             </div>
