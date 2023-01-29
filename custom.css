@@ -151,6 +151,11 @@ video {
   }
 }
 
+@keyframes mymove {
+  from {bottom: -125px; opacity:0.1}
+  to {bottom: 0px;}
+}
+
 @font-face {
   font-family: "Didot";
   src: url("resources/fonts/Didot.woff") format('woff');

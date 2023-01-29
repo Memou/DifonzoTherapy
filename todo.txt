@@ -15,6 +15,4 @@ Make these hidden:
 
 TODO NEW:
 big screen pull the first section text to middle
-maybe pull mels pic to left a bit for big and mid size
-copy navbar to other pages
-2nd section and 3rd section redesign
+Small default picture add background image with opacity 0.8 etc grey
