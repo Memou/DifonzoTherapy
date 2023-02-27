@@ -1,7 +1,5 @@
--mailchimp validation refix
 -video recut
 
--navbar put jane linkto index and copy it to other pages.
 -rename the pictures and change the links or not
 -host pictures in site,host videos in vimeo/imgur
 -Index video maybe make it 4k
@@ -9,7 +7,6 @@
 
 Make these hidden:
 -open a youtube channel with melissa and upload the video there.
--open jane account (free edition,then we will convert it to premium when time comes) 
 -with of subscribe give pdf
 
 
