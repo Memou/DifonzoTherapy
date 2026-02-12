@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/custom.css" />
   <script src="/components/banner.js"></script>
+  <script src="/components/nav.js"></script>
+  <script src="/components/footer.js"></script>
 </head>
 
 <body style="font-family: 'Avenir LT Std', sans-serif">
@@ -29,46 +31,7 @@
   <div id="banner-placeholder"></div>
 
   <!-------------navbar--------------->
-  <div class="container-fluid ">
-    <nav class="navbar navbar-expand-sm navbar-light text-center justify-content-center" style="margin-top:-15px; ">
-      <div class="navbar-header">
-        <div style="width: 375px;">
-          <a class="navbar-brand justify-content-center">
-            <img class="col-12 col-md-12 offset-sm-3 offset-md-3 " src="/resources/logo-aboutme-blog.png" style="
-          /* width: 375px;
-          height: 225px; */
-          margin-top:-30px;text-align: center;">
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
-          aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item"><a href="/index.html" class="nav-link"
-                style="margin-right:0.7em;color: #a352ea;">Home</a></li>
-            <!-- <li class="nav-item"><a href="/services.html" class="nav-link" style="color: #361b4e;">Services</a></li> -->
-            <li class="nav-item"><a href="/treatment-interventions.html" onMouseOver="this.style.color='#DC3494'"
-                onMouseOut="this.style.color='#361b4e'" class="nav-link"
-                style="margin-right:0.8em;color: #361b4e;word-spacing: -1px;">Therapy Treatment Interventions</a></li>
-            <!-- <li class="nav-item"><a href="/contact.html" onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#361b4e'"
-              class="nav-link" style="color: #361b4e;">Contact</a></li> -->
-            <li class="nav-item"><a href="/blog.html" onMouseOver="this.style.color='#DC3494'"
-                onMouseOut="this.style.color='#361b4e'" class="nav-link"
-                style="margin-right:0.8em;color: #361b4e;">Blog</a></li>
-            <li class="nav-item"><a href="https://melissadifonzotherapy.janeapp.com" target="_blank" rel="noopener noreferrer"
-                class="nav-link" style="margin-right:0.8em;color: #DC3494;">Book Now <i
-                  class="bi bi-box-arrow-up-right"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
+  <div id="nav-placeholder" data-active="home" data-logo="blog"></div>
 
   <div class="container-fluid no-padding">
     <div class="row" style="--bs-gutter-x:0px">
@@ -181,29 +144,7 @@
   </div>
 </div>
   <!-------------footer--------------->
-  <footer class="text-black text-center" style="background-color:rgb(182, 251, 243)">
-    <div style="padding:25px 0px 10px 0px">
-      <a href="mailto:melissa@difonzotherapy.com?subject=I am interested to know more about"
-        class="text-decoration-none contactLink" style="font-weight: bold ;margin-right:30px">
-        Contact
-      </a>
-      <a href="https://www.instagram.com/melissa.difonzo.therapy/?hl=en" class="text-decoration-none contactLink">
-        <i class="bi-instagram" style="padding-right:10px"></i>
-      </a>
-      <a href=" https://www.linkedin.com/in/melissa-di-fonzo-724016154/" class="text-decoration-none contactLink">
-        <i class="bi-linkedin" style="padding-right:10px"></i>
-      </a>
-    </div>
-    <div class=" fs-5">
-      <a href="mailto:melissa@difonzotherapy.com" class="contactLink">melissa@difonzotherapy.com</a>
-    </div>
-
-    <div class="fs-6" style="margin:10px">Located in Ontario, Canada</div>
-    <div class="fs-6" style="margin:10px">©<script>document.write(new Date().getFullYear())</script>  DiFonzo Psychotherapy</div>
-    <div class="fs-6 fw-lighter " style="margin:10px 10px 0 10px">Proudly created by
-      <a href="https://www.mehmeterdem.dev" class="contactLink ">Mehmet Erdem</a>
-    </div>
-  </footer>
+  <div id="footer-placeholder" data-bgcolor="rgb(182, 251, 243)"></div>
 </body>
 
 </html>
