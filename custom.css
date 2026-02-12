@@ -189,3 +189,21 @@ video {
   font-family: "Avenir LT Std";
   src: url("resources/fonts/AvenirLTStd-Book.woff") format('woff');
 }
+
+/* Top banner styles (moved from inline styles in index.html) */
+.banner { background-color: #a352ea; }
+.banner .banner-inner { max-width:900px; margin:0 auto; padding:10px 24px; color:#ffffff; position:relative; }
+.banner .contactLink, .banner .contactLink:visited { color: #ffffff; text-decoration: none; }
+.banner-left { padding-left:0; margin-left:-140px; }
+.banner-right { padding-right:0; position:absolute; right:40px; top:50%; transform:translateY(-50%); z-index:2; }
+.banner .email { font-weight:500; font-size:1.25rem; }
+.banner .email .bi-envelope { padding-right:8px; font-size:1.3rem; vertical-align:middle; }
+.banner .social-icon { color:#ffffff; font-size:1.37rem; margin-right:42px; }
+.banner .social-icon:last-child { margin-right:0; }
+@media (max-width: 767.98px) {
+  .banner .banner-inner { padding:8px 12px; }
+  .banner-left, .banner-right { margin-left:0!important; margin-right:0!important; text-align:center; }
+  .banner-right { position:static; right:auto; top:auto; transform:none; }
+  .banner .email { display:block; font-size:1rem; }
+  .banner .social-icon { margin-right:18px; font-size:1.2rem; }
+}
