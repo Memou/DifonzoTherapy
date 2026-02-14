@@ -1,0 +1,97 @@
+=====================================
+EmailJS Setup Instructions for Contact Form
+=====================================
+
+Follow these steps to make your contact form send emails:
+
+STEP 1: Create an EmailJS Account
+----------------------------------
+1. Go to https://www.emailjs.com/
+2. Click "Sign Up" and create a free account
+3. Verify your email address
+
+
+STEP 2: Add an Email Service
+-----------------------------
+1. In your EmailJS dashboard, go to "Email Services"
+2. Click "Add New Service"
+3. Choose your email provider (Gmail recommended)
+4. Follow the prompts to connect your email account (melissa@difonzotherapy.com)
+5. Note down the SERVICE ID (e.g., "service_abc123")
+
+
+STEP 3: Create an Email Template
+---------------------------------
+1. Go to "Email Templates" in the dashboard
+2. Click "Create New Template"
+3. Set the template as follows:
+
+   Template Name: Contact Form Submission
+   
+   Subject: New Contact Form Submission from {{from_name}}
+   
+   Content (Body):
+   ---------------
+   You have received a new message from your website contact form.
+   
+   Name: {{from_name}}
+   Email: {{from_email}}
+   Phone: {{phone}}
+   
+   Message:
+   {{message}}
+   
+   ---------------
+
+4. In "To Email" field, enter: melissa@difonzotherapy.com
+5. Save the template
+6. Note down the TEMPLATE ID (e.g., "template_xyz789")
+
+
+STEP 4: Get Your Public Key
+----------------------------
+1. Go to "Account" > "General"
+2. Find your "Public Key" (e.g., "AbCdEfGhIjKlMnOp")
+3. Copy this key
+
+
+STEP 5: Update Your Contact Page
+---------------------------------
+1. Open the file: contact.html
+2. Find these three lines near the bottom (around line 120):
+
+   const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY_HERE';
+   const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID_HERE';
+   const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID_HERE';
+
+3. Replace them with your actual values:
+
+   const EMAILJS_PUBLIC_KEY = 'AbCdEfGhIjKlMnOp';  // Your public key from Step 4
+   const EMAILJS_SERVICE_ID = 'service_abc123';    // Your service ID from Step 2
+   const EMAILJS_TEMPLATE_ID = 'template_xyz789';  // Your template ID from Step 3
+
+4. Save the file
+
+
+STEP 6: Test Your Form
+-----------------------
+1. Open your website's contact page
+2. Fill out the form with test information
+3. Click Submit
+4. You should receive an email at melissa@difonzotherapy.com
+5. Check your spam folder if you don't see it immediately
+
+
+TROUBLESHOOTING:
+----------------
+- If you get an error, check the browser console (F12) for details
+- Make sure you copied the IDs correctly (no extra spaces)
+- Verify your email service is properly connected in EmailJS
+- EmailJS free plan allows 200 emails per month
+- If you need more, upgrade your EmailJS plan
+
+
+Need Help?
+----------
+EmailJS Documentation: https://www.emailjs.com/docs/
+Support: https://www.emailjs.com/docs/faq/

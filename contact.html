@@ -1,135 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Melissa DiFonzo Psychotherapy</title>
-    <link rel="icon" type="image/x-icon" href="/resources/favicon/android-chrome-512x512.png">
-  
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/custom.css" />
-    <script src="/components/banner.js"></script>
-    <script src="/components/footer.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Melissa DiFonzo Psychotherapy</title>
+  <link rel="icon" type="image/x-icon" href="/resources/favicon/android-chrome-512x512.png">
 
-<body style="font-family: 'Avenir LT Std', sans-serif ;">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/custom.css" />
+  <link rel="stylesheet" href="/normalize.css" />
+  
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script src="/components/banner.js"></script>
+  <script src="/components/nav.js"></script>
+  <script src="/components/footer.js"></script>
+</head>
+
+<body style="font-family: 'Avenir LT Std', sans-serif;background-color: white;">
 
   <div id="banner-placeholder"></div>
 
-  <div class="parallax container-fluid" style="min-height: 980px;background-image: url(/resources/cherry.jpg);">
+  <!-------------navbar--------------->
+  <div id="nav-placeholder" data-active="contact" data-logo="blog"></div>
 
-    <!-------------navbar--------------->
-  <div class="container-fluid pb-5">
-    <nav class="navbar navbar-expand-sm navbar-light text-center justify-content-center" style="margin-top:-15px; ">
-      <div class="navbar-header">
-        <div style="width: 375px;">
-          <a class="navbar-brand justify-content-center">
-            <img src="/resources/logoMain.png" style="
-          width: 375px;
-          height: 225px;
-          margin-top:-30px;">
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
-          aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item"><a href="/index.html" onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#FEE440'"
-               class="nav-link" style="color: #FEE440;">Home</a></li>
-            <!-- <li class="nav-item"><a href="/services.html" class="nav-link" style="color: #361b4e;">Services</a></li> -->
-            <li class="nav-item"><a href="/about-melissa.html" onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#FEE440'"
-               class="nav-link" style="color: #FEE440;">About
-                Melissa</a></li>
-            <li class="nav-item"><a href="/contact.html" class="nav-link" style=" color: #a352ea;">Contact</a></li>
-            <li class="nav-item"><a href="/blog.html" onMouseOver="this.style.color='#DC3494'" onMouseOut="this.style.color='#FEE440'"
-              class="nav-link" style="color: #FEE440;">Blog</a></li>
-            <li class="nav-item"><a href="https://melissadifonzotherapy.janeapp.com" target="_blank" rel="noopener noreferrer"
-              class="nav-link" style="color: #DC3494;">Book Now <i class="bi bi-box-arrow-up-right"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-    <div class="row" style="
-      color: #FEE440;
-      margin-top: -30px;
-      letter-spacing: 0.15em;
-      font-size: 46px;
-      font-weight:bold;
-      font-family: 'Righteous', sans-serif;
-      ">
-      <p class="text-center">GET IN TOUCH</p>
+  <!-------------contact form section--------------->
+  <div class="container" style="max-width: 800px; margin-top: 25px; margin-bottom: 40px;">
+    
+    <!-- Header -->
+    <div class="text-center mb-3">
+      <h1 style="color: #361b4e; font-size: 2.2em; font-weight: 300; line-height: 1.3; margin-bottom: 15px;">
+        New client? <em style="font-style: italic; color: #a352ea;">Past client</em>, someone else?<br>
+        <span style="color: #DC3494;">Let's chat.</span>
+      </h1>
     </div>
 
+    <!-- Intake Form -->
+    <div class="card shadow-sm" style="border: none; border-radius: 15px; padding: 30px;">
+      
+      <form id="contactForm" action="#" method="POST">
+        
+        <!-- First Name -->
+        <div class="mb-3">
+          <label for="firstName" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your first name? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
 
-    <div class="container-fluid p-0 pt-4 pb-5">
-      <div class="row pt-5">
-        <div class="col-sm-12 col-md-6 " style="padding:0px;">
-          <img src="resources/cropped_melissa_sitting.png" class="center" style="width: 100%;
-          object-fit:fill;
-          max-width:  100%;          
-          height: auto;
-          height: 100%;">
+        <!-- Last Name -->
+        <div class="mb-3">
+          <label for="lastName" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your last name? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="text" class="form-control" id="lastName" name="lastName" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
         </div>
-        <div class="col-sm-12 col-md-6 pt-5" style="background-color:  rgb(243,187,219);">
-          <!-- <div class="text-center mt-5" style="color:#6d379c;
-           font-size: 2em;
-           font-family: 'Questrial', sans-serif;">
-            Book online
-          </div> -->
-          <!-- <div class="text-center">
-            <a href="">
-              <img src="/resources/book.jpg" style="
-          display: block;
-          margin-left: auto; 
-          margin-right: auto;
-          display: inline-block;          
-          width: 20%;">
-            </a>
-          </div> -->
-          <div class="text-center" style="
-           color:#6d379c;
-           font-size: 2em;
-           font-family: 'Questrial', sans-serif;
-           ;">
-            E-Mail</div>
-          <div class="text-center">
-            <a href="mailto:melissa@difonzotherapy.com?subject=I am interested to know more about">
-              <img src="/resources/email.jpg" style="
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 1em;
-          margin-bottom: 2em;
-          display: inline-block;
-          width: 20%;">
-            </a>
-          </div>
+
+        <!-- Email Address -->
+        <div class="mb-3">
+          <label for="email" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your email address? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="email" class="form-control" id="email" name="email" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
         </div>
-      </div>
+
+        <!-- Phone Number -->
+        <div class="mb-3">
+          <label for="phone" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your phone number?
+          </label>
+          <input type="tel" class="form-control" id="phone" name="phone"
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <!-- Inquiry -->
+        <div class="mb-3">
+          <label for="inquiry" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What are you inquiring about? <span style="color: #DC3494;">*</span>
+          </label>
+          <textarea class="form-control" id="inquiry" name="inquiry" rows="5" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px; resize: vertical;"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center mt-3">
+          <button type="submit" class="btn btn-lg" 
+            style="background-color: #DC3494; color: white; border: none; border-radius: 25px; 
+            padding: 12px 45px; font-size: 18px; font-weight: 500; transition: all 0.3s ease;"
+            onmouseover="this.style.backgroundColor='#a352ea'"
+            onmouseout="this.style.backgroundColor='#DC3494'">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
+
   </div>
+
   <!-------------footer--------------->
   <div id="footer-placeholder" data-bgcolor="rgb(182, 251, 243)"></div>
+
+  <!-- EmailJS Configuration and Form Handler -->
+  <script>
+    // ========================================
+    // EMAILJS SETUP - FILL IN YOUR CREDENTIALS
+    // ========================================
+    // 1. Go to https://www.emailjs.com/ and create a free account
+    // 2. Add an email service (Gmail, Outlook, etc.)
+    // 3. Create an email template with these variables: {{from_name}}, {{from_email}}, {{phone}}, {{message}}
+    // 4. Get your Public Key from Account > API Keys
+    // 5. Fill in the values below:
+    
+    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY_HERE';  // Replace with your EmailJS public key
+    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID_HERE';  // Replace with your service ID
+    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID_HERE'; // Replace with your template ID
+    
+    // Initialize EmailJS
+    (function() {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    })();
+
+    // Form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Disable submit button to prevent double submission
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.style.backgroundColor = '#a352ea';
+      
+      // Prepare template parameters
+      const templateParams = {
+        from_name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+        from_email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('inquiry').value,
+        to_email: 'melissa@difonzotherapy.com' // Your receiving email
+      };
+      
+      // Send email using EmailJS
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          
+          // Show success message
+          alert('Thank you for your message! We will get back to you within a couple of hours.');
+          
+          // Reset form
+          document.getElementById('contactForm').reset();
+          
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+          submitBtn.style.backgroundColor = '#DC3494';
+        }, function(error) {
+          console.log('FAILED...', error);
+          
+          // Show error message
+          alert('Oops! Something went wrong. Please try again or email us directly at melissa@difonzotherapy.com');
+          
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+          submitBtn.style.backgroundColor = '#DC3494';
+        });
+    });
+  </script>
+
 </body>
 
 </html>
