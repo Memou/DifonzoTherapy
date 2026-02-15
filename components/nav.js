@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="container-fluid">
     <nav class="navbar navbar-expand-sm navbar-light text-center justify-content-center" style="margin-top:${navMarginTop};">
       <div class="navbar-header">
-        <div style="width: 375px; margin-left: 10px;">
+        <div style="width: 375px; margin-left: 60px;">
           <a class="navbar-brand justify-content-center">
             <img class="${logoClass}" src="${logoSrc}" style="margin-top:${logoMarginTop};text-align: center;">
           </a>
@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 style="margin-right:0.8em;color: ${treatmentColor};word-spacing: -1px;">Therapy Treatment Interventions</a></li>
             <li class="nav-item"><a href="/blog.html" ${blogHover} class="nav-link"
                 style="margin-right:0.8em;color: ${blogColor};">Blog</a></li>
-            <!-- <li class="nav-item"><a href="/contact.html" ${contactHover} class="nav-link"
-                style="margin-right:0.8em;color: ${contactColor};">Contact Us</a></li> -->
+            <li class="nav-item"><a href="/contact.html" ${contactHover} class="nav-link"
+                style="margin-right:0.8em;color: ${contactColor};">Contact Us</a></li>
             <li class="nav-item"><a href="https://melissadifonzotherapy.janeapp.com" target="_blank" rel="noopener noreferrer"
                 class="nav-link" style="margin-right:0.8em;color: #DC3494;">Book Now <i
                   class="bi bi-box-arrow-up-right"></i></a>
