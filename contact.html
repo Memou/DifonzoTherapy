@@ -102,6 +102,9 @@
             style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px; resize: vertical;"></textarea>
         </div>
 
+        <!-- Honeypot field - hidden from humans, looks legitimate to bots -->
+        <input type="text" name="website" id="website_url" value="" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
         <!-- reCAPTCHA invisible badge container -->
         <div id="recaptcha-container"></div>
 
@@ -198,6 +201,12 @@
     // Form submission handler
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      
+      // Honeypot check - if filled, it's a bot
+      if (document.getElementById('website_url').value !== '') {
+        console.log('Bot detected via honeypot');
+        return false; // Silently reject
+      }
       
       // Disable submit button to prevent double submission
       const submitBtn = e.target.querySelector('button[type="submit"]');
