@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Determine logo
   const logoSrc = logoVariant === 'blog' ? '/resources/logo-aboutme-blog.png' : '/resources/logoMain.png';
-  const logoClass = logoVariant === 'blog' ? 'col-12 col-md-12 offset-sm-3 offset-md-3' : '';
+  const logoClass = logoVariant === 'blog' ? 'col-12 col-md-12' : '';
   const navMarginTop = logoVariant === 'blog' ? '-15px' : '0';
   const logoMarginTop = logoVariant === 'blog' ? '-30px' : '0';
 
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="container-fluid">
     <nav class="navbar navbar-expand-sm navbar-light text-center justify-content-center" style="margin-top:${navMarginTop};">
       <div class="navbar-header">
-        <div style="width: 375px; margin-left: 60px;">
+        <div style="width: 375px; margin: 0 auto;">
           <a class="navbar-brand justify-content-center">
-            <img class="${logoClass}" src="${logoSrc}" style="margin-top:${logoMarginTop};text-align: center;">
+            <img class="${logoClass}" src="${logoSrc}" style="margin-top:${logoMarginTop};text-align: center; display: block; margin-left: auto; margin-right: auto;">
           </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
