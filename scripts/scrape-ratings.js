@@ -11,12 +11,39 @@ async function scrapeRatings() {
     
     const response = await axios.get(LUMINO_URL, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Cache-Control': 'max-age=0'
       },
-      timeout: 10000
+      timeout: 10000,
+      maxRedirects: 5,
+      validateStatus: function (status) {
+        return status >= 200 && status < 500; // Accept 4xx as well to handle errors gracefully
+      }
     });
     
     const $ = cheerio.load(response.data);
+    
+    // Check if we got blocked
+    if (response.status === 403) {
+      console.log('⚠️ Received 403 Forbidden - website is blocking automated requests');
+      console.log('💡 This is normal - GitHub Actions may have better success with different IP');
+      throw new Error('403 Forbidden');
+    }
+    
+    if (response.status !== 200) {
+      console.log(`⚠️ Received status ${response.status}`);
+      throw new Error(`HTTP ${response.status}`);
+    }
+    
+    console.log('✅ Page fetched successfully!');
     
     // Try multiple selectors to find ratings
     let count = null;
