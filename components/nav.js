@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <li class="nav-item"><a href="/index.html" class="nav-link" ${homeHover}
                 style="margin-right:0.7em;color: ${homeColor};">Home</a></li>
             <li class="nav-item"><a href="/pages/treatment-interventions.html" ${treatmentHover} class="nav-link"
-                style="margin-right:0.8em;color: ${treatmentColor};word-spacing: -1px;">Therapy Treatment Interventions</a></li>
+                style="margin-right:0.8em;color: ${treatmentColor};word-spacing: -1px;">Therapeutic Approaches</a></li>
             <li class="nav-item"><a href="/pages/blog.html" ${blogHover} class="nav-link"
                 style="margin-right:0.8em;color: ${blogColor};">Blog</a></li>
             <li class="nav-item"><a href="/pages/contact.html" ${contactHover} class="nav-link"
