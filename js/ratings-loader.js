@@ -4,7 +4,7 @@
     const ratingsElement = document.getElementById('ratings-count');
     if (!ratingsElement) return;
 
-    let ratingsDisplay = '245+'; // Fallback
+    let ratingsDisplay = '240+'; // Fallback
     
     try {
       const response = await fetch('/js/ratings-data.json?t=' + Date.now());
