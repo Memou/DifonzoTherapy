@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
           <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item"><a href="/index.html" class="nav-link" ${homeHover}
                 style="margin-right:0.7em;color: ${homeColor};">Home</a></li>
-            <li class="nav-item"><a href="/treatment-interventions.html" ${treatmentHover} class="nav-link"
+            <li class="nav-item"><a href="/pages/treatment-interventions.html" ${treatmentHover} class="nav-link"
                 style="margin-right:0.8em;color: ${treatmentColor};word-spacing: -1px;">Therapy Treatment Interventions</a></li>
-            <li class="nav-item"><a href="/blog.html" ${blogHover} class="nav-link"
+            <li class="nav-item"><a href="/pages/blog.html" ${blogHover} class="nav-link"
                 style="margin-right:0.8em;color: ${blogColor};">Blog</a></li>
-            <li class="nav-item"><a href="/contact.html" ${contactHover} class="nav-link"
+            <li class="nav-item"><a href="/pages/contact.html" ${contactHover} class="nav-link"
                 style="margin-right:0.8em;color: ${contactColor};">Contact Us</a></li>
             <li class="nav-item"><a href="https://melissadifonzotherapy.janeapp.com" target="_blank" rel="noopener noreferrer"
                 class="nav-link" style="margin-right:0.8em;color: #DC3494;">Book Now <i
