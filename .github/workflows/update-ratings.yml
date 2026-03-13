@@ -1,0 +1,36 @@
+name: Update Ratings Count
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Runs daily at 2 AM UTC
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+jobs:
+  update-ratings:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # Required to push changes
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install axios cheerio
+      
+      - name: Scrape and update ratings
+        run: node scripts/scrape-ratings.js
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add js/ratings-data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update ratings count [skip ci]"
+          git push
