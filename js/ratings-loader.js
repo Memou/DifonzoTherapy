@@ -6,7 +6,7 @@
     return;
   }
 
-  let ratingsDisplay = '240+'; // Fallback
+  let ratingsDisplay = '245+'; // Fallback
   
   try {
     const response = await fetch('/js/ratings-data.json?t=' + Date.now());
