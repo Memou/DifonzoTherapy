@@ -18,6 +18,7 @@
     }
     
     ratingsElement.textContent = ratingsDisplay;
+    ratingsElement.style.opacity = '1'; // Show after loading
   }
 
   // Load when DOM is ready
