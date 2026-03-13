@@ -1,30 +1,26 @@
 // Load and display ratings count from JSON file
-(function() {
-  async function loadRatings() {
-    const ratingsElement = document.getElementById('ratings-count');
-    if (!ratingsElement) return;
+(async function() {
+  const ratingsElement = document.getElementById('ratings-count');
+  if (!ratingsElement) {
+    console.warn('⚠️ ratings-count element not found');
+    return;
+  }
 
-    let ratingsDisplay = '240+'; // Fallback
-    
-    try {
-      const response = await fetch('/js/ratings-data.json?t=' + Date.now());
-      if (response.ok) {
-        const data = await response.json();
-        ratingsDisplay = `${data.count}+`;
-        console.log(`📊 Loaded ratings: ${ratingsDisplay} (updated: ${data.lastUpdated})`);
-      }
-    } catch (error) {
-      console.warn('⚠️ Using fallback ratings count:', error.message);
+  let ratingsDisplay = '240+'; // Fallback
+  
+  try {
+    const response = await fetch('/js/ratings-data.json?t=' + Date.now());
+    if (response.ok) {
+      const data = await response.json();
+      ratingsDisplay = `${data.count}+`;
+      console.log(`📊 Loaded ratings: ${ratingsDisplay} (updated: ${data.lastUpdated})`);
+    } else {
+      console.warn(`⚠️ Failed to fetch ratings: ${response.status}`);
     }
-    
-    ratingsElement.textContent = ratingsDisplay;
-    ratingsElement.style.opacity = '1'; // Show after loading
+  } catch (error) {
+    console.warn('⚠️ Using fallback ratings count:', error.message);
   }
-
-  // Load when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadRatings);
-  } else {
-    loadRatings();
-  }
+  
+  ratingsElement.textContent = ratingsDisplay;
+  ratingsElement.style.opacity = '1'; // Show after loading
 })();
