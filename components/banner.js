@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="row align-items-center gx-0 banner-row">
 
         <!-- Left: email (hidden on mobile) -->
-        <div class="col-md-4 d-none d-md-flex justify-content-start align-items-center">
+        <div class="col-md-4 d-none d-md-flex justify-content-end align-items-center pe-4">
           <a href="mailto:melissa@difonzotherapy.com" class="banner-email">
             <i class="bi bi-envelope-fill me-2"></i>melissa@difonzotherapy.com
           </a>
@@ -16,13 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- Centre: consultation text (always visible) -->
         <div class="col-12 col-md-4 d-flex justify-content-center align-items-center py-1">
-          <span class="banner-cta-text">
-            <a href="/pages/contact.html" class="banner-cta-link">Free Consultations (Contact to Book)</a>
-          </span>
+          <a href="/pages/contact.html" class="banner-cta-link">Free Consultation</a>
         </div>
 
         <!-- Right: social icons — hidden on mobile here, shown below on mobile -->
-        <div class="col-md-4 d-none d-md-flex justify-content-center align-items-center gap-4">
+        <div class="col-md-4 d-none d-md-flex justify-content-start align-items-center ps-4 gap-4">
           <a href="https://www.instagram.com/melissa.difonzo.therapy/?hl=en" target="_blank" rel="noopener noreferrer" class="banner-social" aria-label="Instagram">
             <i class="bi bi-instagram"></i>
           </a>

@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
   const blogColor = activePage === 'blog' ? '#FCBC25' : '#361b4e';
   const blogHover = activePage === 'blog' ? '' : 'onMouseOver="this.style.color=\'#DC3494\'" onMouseOut="this.style.color=\'#361b4e\'"';
-  
+
+  const teamColor = activePage === 'team' ? '#a352ea' : '#361b4e';
+  const teamHover = activePage === 'team' ? '' : 'onMouseOver="this.style.color=\'#DC3494\'" onMouseOut="this.style.color=\'#361b4e\'"';
+
   const contactColor = activePage === 'contact' ? '#a352ea' : '#361b4e';
   const contactHover = activePage === 'contact' ? '' : 'onMouseOver="this.style.color=\'#DC3494\'" onMouseOut="this.style.color=\'#361b4e\'"';
 
@@ -50,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 style="margin-right:0.7em;color: ${homeColor};">Home</a></li>
             <li class="nav-item"><a href="/pages/treatment-interventions.html" ${treatmentHover} class="nav-link"
                 style="margin-right:0.8em;color: ${treatmentColor};word-spacing: -1px;">Therapeutic Approaches</a></li>
+            <li class="nav-item"><a href="/pages/meet-the-team.html" ${teamHover} class="nav-link"
+                style="margin-right:0.8em;color: ${teamColor};">Meet The Team</a></li>
             <li class="nav-item"><a href="/pages/blog.html" ${blogHover} class="nav-link"
                 style="margin-right:0.8em;color: ${blogColor};">Blog</a></li>
             <li class="nav-item"><a href="/pages/contact.html" ${contactHover} class="nav-link"
