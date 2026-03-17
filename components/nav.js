@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Determine logo
   const logoSrc = logoVariant === 'blog' ? '/resources/logo-aboutme-blog.png' : '/resources/logoMain.png';
   const logoClass = logoVariant === 'blog' ? 'col-12 col-md-12' : '';
-  const navMarginTop = logoVariant === 'blog' ? '-15px' : '0';
+  const navMarginTop = logoVariant === 'blog' ? '0px' : '12px';
   const logoMarginTop = logoVariant === 'blog' ? '-30px' : '0';
 
   const navHTML = `
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="line"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navmenu">
+        <div class="collapse navbar-collapse" id="navmenu" style="margin-top: -15px;">
           <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item"><a href="/index.html" class="nav-link" ${homeHover}
                 style="margin-right:0.7em;color: ${homeColor};">Home</a></li>
