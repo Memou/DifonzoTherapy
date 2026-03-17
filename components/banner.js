@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- Right: social icons — hidden on mobile here, shown below on mobile -->
-        <div class="col-md-4 d-none d-md-flex justify-content-start align-items-center ps-4 gap-4">
+        <div class="col-md-4 d-none d-md-flex justify-content-start align-items-center gap-4" style="padding-left: calc(1.5rem + 20px);">
           <a href="https://www.instagram.com/melissa.difonzo.therapy/?hl=en" target="_blank" rel="noopener noreferrer" class="banner-social" aria-label="Instagram">
             <i class="bi bi-instagram"></i>
           </a>

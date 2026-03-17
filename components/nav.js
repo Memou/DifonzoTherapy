@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item"><a href="/index.html" class="nav-link" ${homeHover}
                 style="margin-right:0.7em;color: ${homeColor};">Home</a></li>
-            <li class="nav-item"><a href="/pages/treatment-interventions.html" ${treatmentHover} class="nav-link"
+            <li class="nav-item"><a href="/pages/therapeutic-approaches.html" ${treatmentHover} class="nav-link"
                 style="margin-right:0.8em;color: ${treatmentColor};word-spacing: -1px;">Therapeutic Approaches</a></li>
             <li class="nav-item"><a href="/pages/meet-the-team.html" ${teamHover} class="nav-link"
                 style="margin-right:0.8em;color: ${teamColor};">Meet The Team</a></li>
