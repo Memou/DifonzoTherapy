@@ -190,20 +190,40 @@ video {
   src: url("resources/fonts/AvenirLTStd-Book.woff") format('woff');
 }
 
-/* Top banner styles (moved from inline styles in index.html) */
+/* Top banner styles */
 .banner { background-color: #a352ea; }
-.banner .banner-inner { max-width:900px; margin:0 auto; padding:10px 24px; color:#ffffff; position:relative; }
-.banner .contactLink, .banner .contactLink:visited { color: #ffffff; text-decoration: none; }
-.banner-left { padding-left:0; margin-left:-140px; }
-.banner-right { padding-right:0; position:absolute; right:40px; top:50%; transform:translateY(-50%); z-index:2; }
-.banner .email { font-weight:500; font-size:1.25rem; }
-.banner .email .bi-envelope { padding-right:8px; font-size:1.3rem; vertical-align:middle; }
-.banner .social-icon { color:#ffffff; font-size:1.37rem; margin-right:42px; }
-.banner .social-icon:last-child { margin-right:0; }
-@media (max-width: 767.98px) {
-  .banner .banner-inner { padding:8px 12px; }
-  .banner-left, .banner-right { margin-left:0!important; margin-right:0!important; text-align:center; }
-  .banner-right { position:static; right:auto; top:auto; transform:none; }
-  .banner .email { display:block; font-size:1rem; }
-  .banner .social-icon { margin-right:18px; font-size:1.2rem; }
+.banner .banner-row { min-height: 52px; }
+
+/* Email link */
+.banner-email { color: #fff; font-size: 1.15rem; font-weight: 500; text-decoration: none; white-space: nowrap; }
+.banner-email:hover { color: #fff; opacity: 0.8; }
+
+/* Centre CTA text */
+.banner-cta-text {
+  color: #fff;
+  font-family: 'Avenir LT Std', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
+.banner-cta-link { color: #fff; text-decoration: none; }
+.banner-cta-link:hover { color: #FCBC25; }
+@media (max-width: 767.98px) {
+  .banner-cta-link { text-decoration: underline; }
+}
+/* At medium widths, shrink center text to prevent overlap */
+@media (min-width: 768px) and (max-width: 999.98px) {
+  .banner-cta-text { font-size: 0.72rem; letter-spacing: 0.5px; }
+  .banner-email { font-size: 0.82rem; }
+  .banner-social { font-size: 1rem; }
+}
+/* At 1000–1199px: stretch banner container to full width so email sits at left edge */
+@media (min-width: 1000px) and (max-width: 1199.98px) {
+  .banner .container { max-width: 100%; padding-left: 16px; padding-right: 16px; }
+}
+
+/* Social icons */
+.banner-social { color: #fff; font-size: 1.3rem; text-decoration: none; transition: opacity 0.2s; }
+.banner-social:hover { color: #fff; opacity: 0.75; }
