@@ -228,3 +228,8 @@ video {
 /* Social icons */
 .banner-social { color: #fff; font-size: 1.3rem; text-decoration: none; transition: opacity 0.2s; }
 .banner-social:hover { color: #fff; opacity: 0.75; }
+
+/* Nav collapse gap — only on desktop */
+@media (min-width: 576px) {
+  .nav-collapse-offset { margin-top: -15px; }
+}

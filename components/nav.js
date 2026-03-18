@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="line"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navmenu" style="margin-top: -15px;">
+        <div class="collapse navbar-collapse nav-collapse-offset" id="navmenu">
           <ul class="navbar-nav nav-fill w-100">
             <li class="nav-item"><a href="/index.html" class="nav-link" ${homeHover}
                 style="margin-right:0.7em;color: ${homeColor};">Home</a></li>
