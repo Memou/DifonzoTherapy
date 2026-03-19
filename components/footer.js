@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <div class="fs-6" style="margin:10px">Located in Ontario, Canada</div>
-    <div class="fs-6" style="margin:10px">©<script>document.write(new Date().getFullYear())</script> DiFonzo Psychotherapy</div>
+    <div class="fs-6" style="margin:10px">&copy; <span id="footer-year"></span> DiFonzo Psychotherapy</div>
     <div class="fs-6 fw-lighter" style="margin:10px 10px 0 10px">Proudly created by
       <a href="https://www.mehmeterdem.dev" class="contactLink">Mehmet Erdem</a>
     </div>
@@ -35,4 +35,5 @@ document.addEventListener('DOMContentLoaded', function() {
   `;
   
   placeholder.outerHTML = footerHTML;
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
 });
