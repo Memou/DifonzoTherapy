@@ -68,7 +68,24 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </nav>
   </div>
+  <div class="text-center mt-2 mb-3">
+    <span style="color: #361b4e; font-size: 16px; font-family: 'Avenir LT Std', sans-serif;">
+      ⭐⭐⭐⭐⭐ <span id="ratings-count" style="opacity: 0; transition: opacity 0.3s;">245+</span> 5-star reviews on <a href="https://luminohealth.sunlife.ca/en/health-care-provider-profile/social-worker/difonzo-psychotherapy/melissa-di-fonzo-717392-947116/" target="_blank" rel="noopener noreferrer" class="contactLink">Lumino Health</a>
+    </span>
+  </div>
   `;
   
   placeholder.outerHTML = navHTML;
+
+  // Load dynamic ratings count
+  const ratingsEl = document.getElementById('ratings-count');
+  if (ratingsEl) {
+    fetch('/js/ratings-data.json?t=' + Date.now())
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (data) ratingsEl.textContent = data.count + '+';
+        ratingsEl.style.opacity = '1';
+      })
+      .catch(() => { ratingsEl.textContent = '245+'; ratingsEl.style.opacity = '1'; });
+  }
 });
