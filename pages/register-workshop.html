@@ -142,34 +142,22 @@
 
       submitBtn.textContent = 'Sending...';
 
-      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
-
       const templateParams = {
         from_name:  document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
         from_email: document.getElementById('email').value,
         phone:      document.getElementById('phone').value,
         message:    '--- WORKSHOP REGISTRATION ---',
-        to_email:   'melissa@difonzotherapy.com'
+        to_email:   'melissa@difonzotherapy.com',
+        'g-recaptcha-response': token
       };
-
-      if (!isLocal) {
-        templateParams['g-recaptcha-response'] = token;
-      }
 
       emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
 
-          // Replace form with a success message
-          const card = document.querySelector('.card.shadow-sm');
-          card.innerHTML =
-            '<div class="text-center py-5">' +
-              '<i class="bi bi-check-circle-fill" style="font-size: 3.5rem; color: #a352ea;"></i>' +
-              '<h2 style="color: #361b4e; margin-top: 20px; font-weight: 400;">You\'re registered!</h2>' +
-              '<p style="color: #555; font-size: 1.05em; max-width: 440px; margin: 15px auto 0;">' +
-                'Thank you for signing up. We\'ll be in touch soon with confirmation and all the details for the workshop.' +
-              '</p>' +
-            '</div>';
+          alert("You're registered! Thank you for signing up. We'll be in touch soon with confirmation and all the details for the workshop.");
+
+          window.location.href = '/index.html';
         }, function(error) {
           console.log('FAILED...', error);
           alert('Oops! Something went wrong. Please try again or email us directly at melissa@difonzotherapy.com');
@@ -195,12 +183,8 @@
       submitBtn.textContent = 'Verifying...';
       submitBtn.style.backgroundColor = '#a352ea';
 
-      // Skip reCAPTCHA on localhost for local testing
-      if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
-        window.onSubmitRecaptcha(null);
-      } else {
-        grecaptcha.execute();
-      }
+      // Execute invisible reCAPTCHA
+      grecaptcha.execute();
     });
 
     // Render invisible reCAPTCHA
