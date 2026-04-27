@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const contactColor = activePage === 'contact' ? '#a352ea' : '#361b4e';
   const contactHover = activePage === 'contact' ? '' : 'onMouseOver="this.style.color=\'#DC3494\'" onMouseOut="this.style.color=\'#361b4e\'"';
 
+  const workshopColor = activePage === 'workshop' ? '#a352ea' : '#361b4e';
+  const workshopHover = activePage === 'workshop' ? '' : 'onMouseOver="this.style.color=\'#DC3494\'" onMouseOut="this.style.color=\'#361b4e\'"';
+
   // Determine logo
   const logoSrc = logoVariant === 'blog' ? '/resources/logo-aboutme-blog.png' : '/resources/logoMain.png';
   const logoClass = logoVariant === 'blog' ? 'col-12 col-md-12' : '';
@@ -59,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 style="margin-right:0.8em;color: ${blogColor};">Blog</a></li>
             <li class="nav-item"><a href="/pages/contact.html" ${contactHover} class="nav-link"
                 style="margin-right:0.8em;color: ${contactColor};">Contact Us</a></li>
+            <li class="nav-item"><a href="/pages/register-workshop.html" ${workshopHover} class="nav-link"
+                style="margin-right:0.8em;color: ${workshopColor};">Register for the Workshop</a></li>
             <li class="nav-item"><a href="https://melissadifonzotherapy.janeapp.com" target="_blank" rel="noopener noreferrer"
                 class="nav-link" style="margin-right:0.8em;color: #DC3494;">Book Now <i
                   class="bi bi-box-arrow-up-right"></i></a>

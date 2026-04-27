@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register for the Workshop - Melissa DiFonzo Psychotherapy</title>
+  <link rel="icon" type="image/x-icon" href="/resources/favicon/android-chrome-512x512.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/custom.css" />
+  <link rel="stylesheet" href="/normalize.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Google reCAPTCHA v2 Invisible -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script src="/components/banner.js"></script>
+  <script src="/components/nav.js"></script>
+  <script src="/components/footer.js"></script>
+</head>
+
+<body style="font-family: 'Avenir LT Std', sans-serif; background-color: white;">
+
+  <div id="banner-placeholder"></div>
+
+  <!-------------navbar--------------->
+  <div id="nav-placeholder" data-active="workshop" data-logo="blog"></div>
+
+  <!-------------workshop registration form section--------------->
+  <div class="container" style="max-width: 800px; margin-top: 25px; margin-bottom: 60px;">
+
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <p style="color: #a352ea; font-size: 0.95em; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 8px;">
+        Upcoming Events
+      </p>
+      <h1 style="color: #361b4e; font-size: 2.2em; font-weight: 300; line-height: 1.3; margin-bottom: 15px;">
+        Ready to join us? <em style="font-style: italic; color: #a352ea;">Register</em> for the<br>
+        <span style="color: #DC3494;">workshop today.</span>
+      </h1>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="card shadow-sm" style="border: none; border-radius: 15px; padding: 35px;">
+
+      <form id="workshopForm" action="#" method="POST">
+
+        <!-- First Name -->
+        <div class="mb-3">
+          <label for="firstName" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your first name? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <!-- Last Name -->
+        <div class="mb-3">
+          <label for="lastName" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your last name? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="text" class="form-control" id="lastName" name="lastName" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <!-- Email Address -->
+        <div class="mb-3">
+          <label for="email" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your email address? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="email" class="form-control" id="email" name="email" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-3">
+          <label for="phone" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your phone number?
+          </label>
+          <input type="tel" class="form-control" id="phone" name="phone"
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <!-- Honeypot field - hidden from humans, looks legitimate to bots -->
+        <input type="text" name="website" id="website_url" value="" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <!-- reCAPTCHA invisible badge container -->
+        <div id="recaptcha-container"></div>
+
+        <!-- Submit Button -->
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-lg"
+            style="background-color: #DC3494; color: white; border: none; border-radius: 25px;
+            padding: 12px 50px; font-size: 18px; font-weight: 500; transition: all 0.3s ease;"
+            onmouseover="this.style.backgroundColor='#a352ea'"
+            onmouseout="this.style.backgroundColor='#DC3494'">
+            Register Now
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+ 
+
+  </div>
+
+  <!-------------footer--------------->
+  <div id="footer-placeholder" data-bgcolor="white"></div>
+
+  <!-- EmailJS Configuration and Form Handler -->
+  <script>
+    const EMAILJS_PUBLIC_KEY = 'WsURv7JzOcAQ2clSu';
+    const EMAILJS_SERVICE_ID = 'service_cv2frwi';
+    const EMAILJS_TEMPLATE_ID = 'template_0vfzu2a';
+    const RECAPTCHA_SITE_KEY = '6LcgWmwsAAAAAPw_eqRwksdpBs7HdZ4X_ORJK65O';
+
+    // Initialize EmailJS
+    (function() {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    })();
+
+    // reCAPTCHA callback function
+    window.onSubmitRecaptcha = function(token) {
+      const form = document.getElementById('workshopForm');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      submitBtn.textContent = 'Sending...';
+
+      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
+
+      const templateParams = {
+        from_name:  document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+        from_email: document.getElementById('email').value,
+        phone:      document.getElementById('phone').value,
+        message:    '--- WORKSHOP REGISTRATION ---',
+        to_email:   'melissa@difonzotherapy.com'
+      };
+
+      if (!isLocal) {
+        templateParams['g-recaptcha-response'] = token;
+      }
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+
+          // Replace form with a success message
+          const card = document.querySelector('.card.shadow-sm');
+          card.innerHTML =
+            '<div class="text-center py-5">' +
+              '<i class="bi bi-check-circle-fill" style="font-size: 3.5rem; color: #a352ea;"></i>' +
+              '<h2 style="color: #361b4e; margin-top: 20px; font-weight: 400;">You\'re registered!</h2>' +
+              '<p style="color: #555; font-size: 1.05em; max-width: 440px; margin: 15px auto 0;">' +
+                'Thank you for signing up. We\'ll be in touch soon with confirmation and all the details for the workshop.' +
+              '</p>' +
+            '</div>';
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Oops! Something went wrong. Please try again or email us directly at melissa@difonzotherapy.com');
+
+          grecaptcha.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Register Now';
+          submitBtn.style.backgroundColor = '#DC3494';
+        });
+    };
+
+    // Form submission handler
+    document.getElementById('workshopForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Honeypot check
+      if (document.getElementById('website_url').value !== '') {
+        return false;
+      }
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Verifying...';
+      submitBtn.style.backgroundColor = '#a352ea';
+
+      // Skip reCAPTCHA on localhost for local testing
+      if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
+        window.onSubmitRecaptcha(null);
+      } else {
+        grecaptcha.execute();
+      }
+    });
+
+    // Render invisible reCAPTCHA
+    window.onload = function() {
+      grecaptcha.render('recaptcha-container', {
+        'sitekey': RECAPTCHA_SITE_KEY,
+        'callback': onSubmitRecaptcha,
+        'size': 'invisible'
+      });
+    };
+  </script>
+
+</body>
+
+</html>
