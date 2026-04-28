@@ -96,6 +96,18 @@
             style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
         </div>
 
+        <!-- Event Selection -->
+        <div class="mb-3">
+          <label for="eventSelection" class="form-label" style="color: #361b4e; font-weight: 500;">
+            Which event are you registering for? <span style="color: #DC3494;">*</span>
+          </label>
+          <select class="form-select" id="eventSelection" name="eventSelection" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px; color: #361b4e;">
+            <option value="" disabled selected>Select an event&hellip;</option>
+            <option value="EMPOWERING PARENTS, EMBRACING NEURODIVERSITY">Empowering Parents, Embracing Neurodiversity</option>
+          </select>
+        </div>
+
         <!-- Honeypot field - hidden from humans, looks legitimate to bots -->
         <input type="text" name="website" id="website_url" value="" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
@@ -146,7 +158,7 @@
         from_name:  document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
         from_email: document.getElementById('email').value,
         phone:      document.getElementById('phone').value,
-        message:    '--- WORKSHOP REGISTRATION ---',
+        message:    document.getElementById('eventSelection').value,
         to_email:   'melissa@difonzotherapy.com',
         'g-recaptcha-response': token
       };
