@@ -138,4 +138,12 @@ async function scrapeRatings() {
   }
 }
 
-scrapeRatings();
+process.on('unhandledRejection', (err) => {
+  console.error('❌ Unhandled rejection:', err && err.message);
+  process.exit(0); // Don't fail the workflow
+});
+
+scrapeRatings().catch((err) => {
+  console.error('❌ Fatal error:', err && err.message);
+  process.exit(0); // Don't fail the workflow
+});
