@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0;url=/index.html" />
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>Redirecting to homepage...</p>
+  <script>window.location.href = '/index.html';</script>
+</body>
+</html>
+
+<!--
+============================================================
+ORIGINAL WORKSHOP REGISTRATION PAGE — commented out below.
+Uncomment when ready to reactivate.
+============================================================
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register for the Workshop - Melissa DiFonzo Psychotherapy</title>
+  <link rel="icon" type="image/x-icon" href="/resources/favicon/android-chrome-512x512.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/custom.css" />
+  <link rel="stylesheet" href="/normalize.css" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script src="/components/banner.js"></script>
+  <script src="/components/nav.js"></script>
+  <script src="/components/footer.js"></script>
+</head>
+
+<body style="font-family: 'Avenir LT Std', sans-serif; background-color: white;">
+
+  <div id="banner-placeholder"></div>
+
+  <div id="nav-placeholder" data-active="workshop" data-logo="blog"></div>
+
+  <div class="container" style="max-width: 800px; margin-top: 25px; margin-bottom: 60px;">
+
+    <div class="text-center mb-4">
+      <p style="color: #a352ea; font-size: 0.95em; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; margin-bottom: 8px;">
+        Upcoming Events
+      </p>
+      <h1 style="color: #361b4e; font-size: 2.2em; font-weight: 300; line-height: 1.3; margin-bottom: 15px;">
+        Ready to join us? <em style="font-style: italic; color: #a352ea;">Register</em> for the<br>
+        <span style="color: #DC3494;">workshop today.</span>
+      </h1>
+    </div>
+
+    <div class="card shadow-sm" style="border: none; border-radius: 15px; padding: 35px;">
+
+      <form id="workshopForm" action="#" method="POST">
+
+        <div class="mb-3">
+          <label for="firstName" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your first name? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <div class="mb-3">
+          <label for="lastName" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your last name? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="text" class="form-control" id="lastName" name="lastName" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your email address? <span style="color: #DC3494;">*</span>
+          </label>
+          <input type="email" class="form-control" id="email" name="email" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label" style="color: #361b4e; font-weight: 500;">
+            What's your phone number?
+          </label>
+          <input type="tel" class="form-control" id="phone" name="phone"
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px;">
+        </div>
+
+        <div class="mb-3">
+          <label for="eventSelection" class="form-label" style="color: #361b4e; font-weight: 500;">
+            Which event are you registering for? <span style="color: #DC3494;">*</span>
+          </label>
+          <select class="form-select" id="eventSelection" name="eventSelection" required
+            style="border: 2px solid #a352ea; border-radius: 8px; padding: 10px; font-size: 16px; color: #361b4e;">
+            <option value="" disabled selected>Select an event&hellip;</option>
+            <option value="EMPOWERING PARENTS, EMBRACING NEURODIVERSITY">Empowering Parents, Embracing Neurodiversity</option>
+            <option value="EMPOWERING PARENTS, EMBRACING NEURODIVERSITY - MAY 31">Empowering Parents, Embracing Neurodiversity — May 31</option>
+          </select>
+        </div>
+
+        <input type="text" name="website" id="website_url" value="" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div id="recaptcha-container"></div>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-lg"
+            style="background-color: #DC3494; color: white; border: none; border-radius: 25px;
+            padding: 12px 50px; font-size: 18px; font-weight: 500; transition: all 0.3s ease;"
+            onmouseover="this.style.backgroundColor='#a352ea'"
+            onmouseout="this.style.backgroundColor='#DC3494'">
+            Register Now
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <div id="footer-placeholder" data-bgcolor="white"></div>
+
+  <script>
+    const EMAILJS_PUBLIC_KEY = 'WsURv7JzOcAQ2clSu';
+    const EMAILJS_SERVICE_ID = 'service_cv2frwi';
+    const EMAILJS_TEMPLATE_ID = 'template_0vfzu2a';
+    const RECAPTCHA_SITE_KEY = '6LcgWmwsAAAAAPw_eqRwksdpBs7HdZ4X_ORJK65O';
+
+    (function() {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    })();
+
+    window.onSubmitRecaptcha = function(token) {
+      const form = document.getElementById('workshopForm');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      submitBtn.textContent = 'Sending...';
+
+      const templateParams = {
+        from_name:  document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+        from_email: document.getElementById('email').value,
+        phone:      document.getElementById('phone').value,
+        message:    document.getElementById('eventSelection').value,
+        to_email:   'melissa@difonzotherapy.com',
+        'g-recaptcha-response': token
+      };
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+
+          alert("You're registered! Thank you for signing up. We'll be in touch soon with confirmation and all the details for the workshop.");
+
+          window.location.href = '/index.html';
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Oops! Something went wrong. Please try again or email us directly at melissa@difonzotherapy.com');
+
+          grecaptcha.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Register Now';
+          submitBtn.style.backgroundColor = '#DC3494';
+        });
+    };
+
+    document.getElementById('workshopForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (document.getElementById('website_url').value !== '') {
+        return false;
+      }
+
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Verifying...';
+      submitBtn.style.backgroundColor = '#a352ea';
+
+      grecaptcha.execute();
+    });
+
+    window.onload = function() {
+      grecaptcha.render('recaptcha-container', {
+        'sitekey': RECAPTCHA_SITE_KEY,
+        'callback': onSubmitRecaptcha,
+        'size': 'invisible'
+      });
+    };
+  </script>
+
+</body>
+
+</html>
+-->
