@@ -22,17 +22,29 @@ This system automatically scrapes the Lumino Health ratings count daily and upda
 
 ## 🚀 How to Use
 
+### Automatic Updates
+- Runs daily at 2 AM UTC automatically (and on every push)
+- SunLife uses **DataDome** bot protection, which blocks GitHub's server IPs (403).
+  To keep automation working, the scraper falls back to a **scraping proxy service**
+  when the direct request is blocked. See "Proxy Setup" below.
+
+### Proxy Setup (recommended for GitHub Actions)
+1. Sign up for a scraping proxy — recommended **Crawlbase** (free: 20,000 requests, no credit card):
+   - <https://crawlbase.com> → grab your API token from the dashboard
+   - Alternatives: **ScrapingBee** (1,000 free credits) or **ScraperAPI** (1,000 free credits)
+2. In your GitHub repo: **Settings → Secrets and variables → Actions → New repository secret**
+   - Name: `SCRAPE_API_KEY`, Value: your token
+   - Optional variables: `SCRAPE_PROVIDER` (`crawlbase`|`scrapingbee`|`scraperapi`, default `crawlbase`), `SCRAPE_JS` (`true` to enable JS rendering)
+3. Run the workflow (Actions tab → "Update Ratings Count" → Run workflow).
+4. The scraper tries the **direct request first** (free, works from home IPs → no credits used),
+   and only falls back to the proxy when blocked.
+
 ### Manual Trigger (Test It Now!)
 1. Go to your GitHub repository
 2. Click on **"Actions"** tab
 3. Select **"Update Ratings Count"** workflow
 4. Click **"Run workflow"** button
 5. Wait 30-60 seconds and check the results
-
-### Automatic Updates
-- Runs daily at 2 AM UTC automatically
-- No action required from you
-- Check the Actions tab to see the history
 
 ## 📊 Current Ratings Display
 The ratings now show dynamically on your homepage:

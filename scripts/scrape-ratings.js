@@ -55,35 +55,69 @@ function extractCount($) {
   return null;
 }
 
-// Fetch a single provider URL and return the ratings count (or null if not found).
-async function fetchCountFromUrl(url) {
-  const response = await axios.get(url, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-      'Accept-Language': 'en-US,en;q=0.9',
-      'Accept-Encoding': 'gzip, deflate, br',
-      'Connection': 'keep-alive',
-      'Upgrade-Insecure-Requests': '1',
-      'Sec-Fetch-Dest': 'document',
-      'Sec-Fetch-Mode': 'navigate',
-      'Sec-Fetch-Site': 'none',
-      'Cache-Control': 'max-age=0'
-    },
-    timeout: 15000,
-    maxRedirects: 5,
-    validateStatus: function (status) {
-      return status >= 200 && status < 500; // Accept 4xx as well to handle errors gracefully
-    }
-  });
+// --- Proxy service configuration (used when SunLife blocks the request, e.g. in GitHub Actions) ---
+// SCRAPE_API_KEY  : token from your proxy provider — set as a GitHub Actions secret.
+// SCRAPE_PROVIDER : 'crawlbase' (default; 20k free req) | 'scrapingbee' (1k free credits) | 'scraperapi' (1k free credits)
+// SCRAPE_JS       : 'true' to enable JS rendering (Crawlbase 'javascript', others 'render_js'/'render').
+//                   Leave 'false' when possible — the page is server-rendered and plain requests are cheaper.
+const SCRAPE_API_KEY = process.env.SCRAPE_API_KEY || '';
+const SCRAPE_PROVIDER = (process.env.SCRAPE_PROVIDER || 'crawlbase').toLowerCase();
+const SCRAPE_JS = (process.env.SCRAPE_JS || 'false').toLowerCase() === 'true';
 
-  if (response.status === 403) {
-    console.log('⚠️ Received 403 Forbidden - website is blocking automated requests');
-    return { count: null, error: '403 Forbidden' };
+// Build the proxy API URL for the chosen provider. Returns null when no key is configured.
+function buildProxyUrl(targetUrl) {
+  if (!SCRAPE_API_KEY) return null;
+  const enc = encodeURIComponent(targetUrl);
+  switch (SCRAPE_PROVIDER) {
+    case 'scrapingbee':
+      return `https://app.scrapingbee.com/api/v1/?api_key=${SCRAPE_API_KEY}&url=${enc}&render_js=${SCRAPE_JS}&premium_proxy=true`;
+    case 'scraperapi':
+      return `https://api.scraperapi.com/?api_key=${SCRAPE_API_KEY}&url=${enc}&render=${SCRAPE_JS}&premium=true`;
+    case 'crawlbase':
+    default:
+      return `https://api.crawlbase.com/?token=${SCRAPE_API_KEY}&url=${enc}&javascript=${SCRAPE_JS}`;
   }
-  if (response.status !== 200) {
-    console.log(`⚠️ Received status ${response.status} from ${url}`);
-    return { count: null, error: `HTTP ${response.status}` };
+}
+
+// Simple GET that succeeds on 2xx/3xx and returns null on any failure (no throw).
+async function httpGet(url) {
+  try {
+    return await axios.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Cache-Control': 'max-age=0'
+      },
+      timeout: 20000,
+      maxRedirects: 5,
+      validateStatus: (status) => status >= 200 && status < 400
+    });
+  } catch (error) {
+    console.log(`⚠️  Request failed for ${url.slice(0, 90)}: ${error.message}`);
+    return null;
+  }
+}
+
+// Fetch a single provider URL (direct first, then via proxy if configured)
+// and return the ratings count (or null if not found).
+async function fetchCountFromUrl(url) {
+  let response = await httpGet(url); // direct — works from residential IPs, uses no proxy credits
+
+  if (!response && SCRAPE_API_KEY) {
+    const proxyUrl = buildProxyUrl(url);
+    console.log(`🔁 Direct fetch blocked — retrying via ${SCRAPE_PROVIDER} proxy...`);
+    response = await httpGet(proxyUrl);
+  }
+
+  if (!response) {
+    return { count: null, error: 'fetch failed (direct and proxy)' };
   }
 
   console.log(`✅ Page fetched successfully (${response.status})`);
@@ -95,8 +129,8 @@ async function fetchCountFromUrl(url) {
     return { count };
   }
 
-  console.log('⚠️ Could not extract ratings count from this URL, trying next...');
-  return { count: null };
+  console.log('⚠️  Could not extract ratings count from this URL, trying next...');
+  return { count: null, error: 'no ratings count found in page' };
 }
 
 async function scrapeRatings() {

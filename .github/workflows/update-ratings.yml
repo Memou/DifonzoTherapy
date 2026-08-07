@@ -29,6 +29,14 @@ jobs:
       
       - name: Scrape and update ratings
         run: node scripts/scrape-ratings.js
+        env:
+          # Optional: scraping proxy token (free tier available). Set as a repo secret
+          # named SCRAPE_API_KEY in Settings → Secrets and variables → Actions.
+          # The scraper tries direct first, then falls back to the proxy provider
+          # (SCRAPE_PROVIDER defaults to 'crawlbase').
+          SCRAPE_API_KEY: ${{ secrets.SCRAPE_API_KEY }}
+          SCRAPE_PROVIDER: ${{ vars.SCRAPE_PROVIDER }}
+          SCRAPE_JS: ${{ vars.SCRAPE_JS }}
       
       - name: Commit changes
         run: |
