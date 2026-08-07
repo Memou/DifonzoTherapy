@@ -13,12 +13,12 @@ This system automatically scrapes the Lumino Health ratings count daily and upda
 5. **`package.json`** - npm dependencies for scraper
 
 ### How It Works:
-1. **Daily Automation**: GitHub Actions runs every day at 2 AM UTC
-2. **Scraping**: Fetches the Lumino Health page and extracts the ratings count
+1. **Daily Automation**: GitHub Actions runs every day at 2 AM UTC (and on every push)
+2. **Scraping**: Fetches the Lumino Health page (falls back to the new `providersearch.sunlife.ca` URL) and extracts the ratings count
 3. **Rounding**: Rounds the count down to the nearest 5 (246 → 245+, 251 → 250+)
 4. **Auto-Update**: Commits the updated JSON file to the repository
 5. **Display**: Your website reads from the JSON file and displays the count
-6. **Fallback**: If scraping fails, it shows "245+" as a safe fallback
+6. **Fallback**: If scraping fails, the last-known count is kept — but the workflow now **fails loudly** (shows an error in the Actions tab) so you know to check it
 
 ## 🚀 How to Use
 
@@ -42,7 +42,7 @@ The ratings now show dynamically on your homepage:
 ## 🔧 Troubleshooting
 
 ### If ratings don't update:
-1. Check GitHub Actions tab for errors
+1. Check GitHub Actions tab for errors — a red "Update Ratings Count" run means the scraper couldn't reach the page (SunLife blocks some server IPs). The site keeps the last-known count in that case.
 2. Verify the workflow ran successfully
 3. Check if ratings-data.json was updated
 
