@@ -30,11 +30,14 @@ This system automatically scrapes the Lumino Health ratings count daily and upda
 
 ### Proxy Setup (recommended for GitHub Actions)
 1. Sign up for a scraping proxy — recommended **Crawlbase** (free: 20,000 requests, no credit card):
-   - <https://crawlbase.com> → grab your API token from the dashboard
+   - <https://crawlbase.com> → grab your **JavaScript token** from the dashboard
+   - ⚠️ Use the **JavaScript token**, not the Normal token: SunLife uses **DataDome**,
+     which usually requires a real headless browser (Normal token often returns a 525 challenge error).
    - Alternatives: **ScrapingBee** (1,000 free credits) or **ScraperAPI** (1,000 free credits)
-2. In your GitHub repo: **Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `SCRAPE_API_KEY`, Value: your token
-   - Optional variables: `SCRAPE_PROVIDER` (`crawlbase`|`scrapingbee`|`scraperapi`, default `crawlbase`), `SCRAPE_JS` (`true` to enable JS rendering)
+2. In your GitHub repo: **Settings → Secrets and variables → Actions**
+   - **New repository secret** → Name `SCRAPE_API_KEY`, Value: your JavaScript token
+   - **New repository variable** → Name `SCRAPE_JS`, Value: `true` (enables JS rendering)
+   - Optional variable: `SCRAPE_PROVIDER` (`crawlbase`|`scrapingbee`|`scraperapi`, default `crawlbase`)
 3. Run the workflow (Actions tab → "Update Ratings Count" → Run workflow).
 4. The scraper tries the **direct request first** (free, works from home IPs → no credits used),
    and only falls back to the proxy when blocked.
