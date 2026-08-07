@@ -3,6 +3,9 @@ name: Update Ratings Count
 on:
   schedule:
     - cron: '0 2 * * *'  # Runs daily at 2 AM UTC
+  push:                  # Run on every push so failures surface immediately
+    branches:
+      - main
   workflow_dispatch:  # Allows manual trigger from GitHub UI
 
 jobs:
