@@ -158,14 +158,31 @@ async function scrapeRatings() {
     if (count && !Number.isNaN(count)) {
       const roundedCount = Math.floor(count / 5) * 5;
 
+      const filePath = path.join(__dirname, '../js/ratings-data.json');
+
+      // Read the currently committed data so we only write (and thus only
+      // commit) when the displayed count actually changes. Timestamp-only
+      // diffs are skipped entirely to keep the git history clean.
+      let existing = null;
+      if (fs.existsSync(filePath)) {
+        try {
+          existing = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        } catch (e) {
+          console.log('⚠️ Existing ratings-data.json is unparseable — will overwrite.');
+        }
+      }
+
+      if (existing && existing.count === roundedCount) {
+        console.log(`ℹ️ Displayed count unchanged (${roundedCount}+) — skipping write to avoid a no-op commit.`);
+        return; // Success — nothing new to commit
+      }
+
       const data = {
         count: roundedCount,
         actualCount: count,
         lastUpdated: new Date().toISOString().split('T')[0],
         lastChecked: new Date().toISOString()
       };
-
-      const filePath = path.join(__dirname, '../js/ratings-data.json');
 
       // Ensure js directory exists
       const jsDir = path.join(__dirname, '../js');

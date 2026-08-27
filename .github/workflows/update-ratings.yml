@@ -38,6 +38,8 @@ jobs:
           SCRAPE_PROVIDER: ${{ vars.SCRAPE_PROVIDER }}
           SCRAPE_JS: ${{ vars.SCRAPE_JS }}
       
+      # The scraper only writes js/ratings-data.json when the displayed count
+      # changed, so this step naturally commits nothing when it didn't.
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
